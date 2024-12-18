@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace AuthenticationAPI.Models;
+
+public partial class DatabaseContext : DbContext
+{
+    public DatabaseContext(){}
+
+    public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options){}
+
+    public DbSet<User> Users { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=auth_database;Username=user;Password=12345");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder){OnModelCreatingPartial(modelBuilder);}
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}
