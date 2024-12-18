@@ -53,5 +53,11 @@ namespace ToDoApplication.Models
         public DateTime ScheduledFor { get; set; }
 
         public required Guid ToDoId { get; set; }
+    
+        public Task(ToDo toDo)
+        {
+            ToDoId = toDo.Id;
+        }
+    
     }
 }

@@ -14,12 +14,11 @@ public class User
     [Column("email", TypeName = "VARCHAR(255)"), Required(ErrorMessage = "Required email!")]
     public required string Email { get; set; }
 
-    [MinLength(6, ErrorMessage = "Password must be more than 6 digits long")]
     [Column("password", TypeName = "VARCHAR(255)"), Required(ErrorMessage = "Required password")]
     public required string Password { get; set; }
 
     [Column("create_at", TypeName = "TIMESTAMP"), Required]
     public DateTime CreateAt { get; set; } = DateTime.Now;
 
-    public required ToDo ToDo { get; set; }
+    public ToDo? ToDoList { get; set; }
 }

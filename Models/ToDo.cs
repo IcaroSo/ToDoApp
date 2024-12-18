@@ -11,7 +11,7 @@ namespace ToDoApplication.Models
 
         public List<Task> Tasks { get; set; } = new List<Task>();
 
-        public required Guid UserId { get; set; }
+        public Guid UserId { get; set; }
 
 
         [NotMapped]
@@ -20,5 +20,12 @@ namespace ToDoApplication.Models
 
         [NotMapped]
         public List<Task> CompletedTasks => Tasks.Where(t => t.IsCompleted).ToList();
+    
+        public ToDo(User user)
+        {
+            UserId = user.Id;
+        }
+    
+    
     }
 }
