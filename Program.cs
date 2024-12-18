@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using AuthenticationAPI.Models;
+using ToDoApplication.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
