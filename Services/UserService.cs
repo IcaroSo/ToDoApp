@@ -27,7 +27,7 @@ namespace ToDoApplication.Services
 
             ToDo toDo = new ToDo(user);
 
-            user.ToDoList = toDo;
+            user.ToDo = toDo;
 
             var userRegistered = user;
 

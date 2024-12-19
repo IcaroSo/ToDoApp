@@ -9,7 +9,7 @@ public partial class DatabaseContext : DbContext
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
     public virtual DbSet<User> Users { get; set; }
-    public virtual DbSet<Task> Tasks { get; set; }
+    public virtual DbSet<Tasks> Tasks { get; set; }
     public virtual DbSet<ToDo> ToDo { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

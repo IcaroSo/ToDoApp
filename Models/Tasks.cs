@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ToDoApplication.Models
 {
-    public class Task
+    public class Tasks
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -54,8 +54,8 @@ namespace ToDoApplication.Models
 
         public required Guid ToDoId { get; set; }
     
-        public Task() { }
-        public Task(ToDo toDo)
+        public Tasks() { }
+        public Tasks(ToDo toDo)
         {
             ToDoId = toDo.Id;
         }

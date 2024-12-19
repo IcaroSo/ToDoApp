@@ -9,17 +9,17 @@ namespace ToDoApplication.Models
         public Guid Id { get; set; } = Guid.NewGuid();
 
 
-        public List<Task> Tasks { get; set; } = new List<Task>();
+        public List<Tasks> Tasks { get; set; } = new List<Tasks>();
 
         public Guid UserId { get; set; }
 
 
         [NotMapped]
-        public List<Task> ImportantTasks => Tasks.Where(t => t.IsImportant).ToList();
+        public List<Tasks> ImportantTasks => Tasks.Where(t => t.IsImportant).ToList();
 
 
         [NotMapped]
-        public List<Task> CompletedTasks => Tasks.Where(t => t.IsCompleted).ToList();
+        public List<Tasks> CompletedTasks => Tasks.Where(t => t.IsCompleted).ToList();
     
         public ToDo() { }
         public ToDo(User user)
