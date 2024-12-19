@@ -21,6 +21,7 @@ namespace ToDoApplication.Models
         [NotMapped]
         public List<Task> CompletedTasks => Tasks.Where(t => t.IsCompleted).ToList();
     
+        public ToDo() { }
         public ToDo(User user)
         {
             UserId = user.Id;

@@ -38,9 +38,28 @@ namespace ToDoApplication.Services
             return userRegistered;
         }
 
+        public async Task<User> LoginUser(LoginRequest user)
+        {
+            var existingUser = await DatabaseContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+
+            if(existingUser == null)
+                throw new InvalidOperationException("This email is incorrect!");
+
+            if(!VerifyPassword(user.Password,existingUser.Password))
+                throw new InvalidOperationException("This password is incorrect!");
+
+            var userLogged = existingUser;
+            return userLogged;
+        }
+
         public string PasswordHash(string password)
         {
             return BCrypt.Net.BCrypt.EnhancedHashPassword(password);
+        }
+
+        public bool VerifyPassword(string passwordLogin,string passwordDataBase) 
+        {
+            return BCrypt.Net.BCrypt.EnhancedVerify(passwordLogin, passwordDataBase);
         }
     }
 }

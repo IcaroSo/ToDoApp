@@ -20,5 +20,8 @@ public class User
     [Column("create_at", TypeName = "TIMESTAMP"), Required]
     public DateTime CreateAt { get; set; } = DateTime.Now;
 
-    public ToDo? ToDoList { get; set; }
+    public ToDo? ToDo { get; set; }
+
+    public User() { }
+
 }

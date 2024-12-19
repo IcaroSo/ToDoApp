@@ -54,6 +54,7 @@ namespace ToDoApplication.Models
 
         public required Guid ToDoId { get; set; }
     
+        public Task() { }
         public Task(ToDo toDo)
         {
             ToDoId = toDo.Id;

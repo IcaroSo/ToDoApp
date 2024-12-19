@@ -133,3 +133,8 @@ C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\obj\Debug\
 C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\obj\Debug\net8.0\ToDoApplication.pdb
 C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\obj\Debug\net8.0\ToDoApplication.genruntimeconfig.cache
 C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\obj\Debug\net8.0\ref\ToDoApplication.dll
+C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\bin\Debug\net8.0\Moq.dll
+C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\icaro\OneDrive\Documentos\C#\ToDoApplication\ToDoApplication\bin\Debug\net8.0\Moq.EntityFrameworkCore.dll
