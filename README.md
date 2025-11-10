@@ -78,5 +78,4 @@ Run the tests using:
 
 ```bash
 dotnet test
-
->>>>>>> develop
+```
